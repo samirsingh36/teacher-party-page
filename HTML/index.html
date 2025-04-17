@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teacher's Day Party 2025</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .scroll-banner {
+      width: 100%;
+      background-color: #4b0082;
+      color: #fff;
+      padding: 1rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 12s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .hero {
+      background: url('party2.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 4rem 2rem 1rem 2rem; /* reduced bottom padding */
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem; /* tighter spacing */
+    }
+
+    .cta-button {
+  background-color: white;
+  color: #287ba2;
+  padding: 1.2rem 2.5rem; /* increased padding */
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3rem; /* bigger text */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* added shadow */
+}
+
+
+    .cta-button:hover {
+      background-color: #e6e6e6;
+    }
+
+    .countdown {
+      background: url('https://t3.ftcdn.net/jpg/08/37/17/58/360_F_837175801_MsV0PbFW5KdXTTIudyShkJkfLr5uhtAk.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 4rem 2rem;
+      text-align: center;
+      font-family: 'Courier New', monospace;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin: 0; /* removed top margin */
+    }
+
+    .countdown h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: #fff;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .progress {
+      height: 100%;
+      background: #287ba2;
+      border-radius: 5px;
+      transition: width 1s ease-out;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: #fff;
+    }
+
+    .timer-unit {
+      background: #333;
+      color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+      min-width: 80px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .timer-unit:hover {
+      transform: scale(1.1);
+    }
+
+    .timer span {
+      font-size: 3rem;
+      font-weight: bold;
+      display: block;
+    }
+
+    .timer label {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .timer {
+        flex-direction: column;
+      }
+
+      .timer-unit {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .modal-content h3 {
+      margin-bottom: 1rem;
+    }
+
+    .modal-content input,
+    .modal-content select {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-banner">
+    <div class="scroll-text">🎉 Welcome to Teacher's Day Party 2025 🎉 Enjoy the vibes, music, and fun with your teachers! 🎶📚</div>
+  </div>
+
+  <section class="hero">
+    <h1>Celebrate With Us!</h1>
+    <p>Let’s make Teacher’s Day 2025 unforgettable! 💐🎊</p>
+    <a href="buy.html"><button class="cta-button">BUY PASS</button></a>
+  </section>
+
+  <section class="countdown">
+    <h2>⏳ Countdown to Teacher's Day 2025</h2>
+    <div class="progress-bar">
+      <div class="progress" id="progressBar"></div>
+    </div>
+    <div class="timer">
+      <div class="timer-unit">
+        <span id="days">00</span>
+        <label>Days</label>
+      </div>
+      <div class="timer-unit">
+        <span id="hours">00</span>
+        <label>Hours</label>
+      </div>
+      <div class="timer-unit">
+        <span id="minutes">00</span>
+        <label>Minutes</label>
+      </div>
+      <div class="timer-unit">
+        <span id="seconds">00</span>
+        <label>Seconds</label>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>📧 Email: samirsingh.363646.gmail.com.in | 📞 +91-9876543210</p>
+    <p>&copy BY: SAMIR SINGH</p>
+  </footer>
+
+  <div class="modal" id="infoModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h3>Enter Your Details</h3>
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="text" id="class" placeholder="Class" required />
+      <input type="text" id="section" placeholder="Section" required />
+      <select id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <input type="number" id="passes" placeholder="No. of Passes" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <button class="cta-button" onclick="payNow()">Proceed to Pay</button>
+    </div>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById('infoModal').style.display = 'block';
+    }
+    function closeForm() {
+      document.getElementById('infoModal').style.display = 'none';
+    }
+
+    function payNow() {
+      const name = document.getElementById('name').value;
+      const studentClass = document.getElementById('class').value;
+      const section = document.getElementById('section').value;
+      const gender = document.getElementById('gender').value;
+      const passes = parseInt(document.getElementById('passes').value);
+      const phone = document.getElementById('phone').value;
+
+      const amount = passes * 800 * 100; // in paise
+
+      const options = {
+        key: "rzp_test_1234567890", // Replace with your Razorpay Test Key
+        amount: amount,
+        currency: "INR",
+        name: "Teacher's Day Party 2025",
+        description: `Passes for ${name} (${studentClass}-${section}, ${gender})`,
+        handler: function (response) {
+          alert("🎉 Payment Successful! Thank you for buying the pass.");
+          closeForm();
+        },
+        prefill: {
+          name: name,
+          contact: phone
+        },
+        theme: {
+          color: "#287ba2"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+
+    const countDownDate = new Date("September 5, 2025 00:00:00").getTime();
+
+    const timer = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = String(days).padStart(2, '0');
+      document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+      const totalDuration = countDownDate - new Date("January 1, 2025 00:00:00").getTime();
+      const elapsed = totalDuration - distance;
+      const progress = (elapsed / totalDuration) * 100;
+      document.getElementById("progressBar").style.width = progress + "%";
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".timer").innerHTML = "<h3>🎉 It's Party Time! 🎉</h3>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+
